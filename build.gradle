@@ -20,6 +20,19 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
+ext.profile = (!project.hasProperty("profile") || !profile) ? "dev" : profile
+sourceSets{
+    main {
+        resources {
+            srcDirs = [
+                    "src/main/resources/${profile}",
+                    "src/main/java",
+            ]
+        }
+    }
+}
+
+
 tasks.named('test') {
     useJUnitPlatform()
 }
