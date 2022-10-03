@@ -8,8 +8,6 @@ import java.util.List;
 
 public interface TimeLineRepository extends JpaRepository<TimeLine, Long> {
 
-    List<TimeLine> getAllByName(String name);
-
-    List<TimeLine> getAllByNameAndRegDate(String name, LocalDateTime regDate);
+    List<TimeLine> findAllByRegDateBetween(LocalDateTime startDate, LocalDateTime endDate);
 
 }

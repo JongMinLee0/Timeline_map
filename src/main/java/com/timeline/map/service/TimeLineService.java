@@ -1,18 +1,16 @@
 package com.timeline.map.service;
 
+import com.timeline.map.domain.TimeLineVO;
 import com.timeline.map.model.TimeLine;
-import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
-@Service
 public interface TimeLineService {
 
-    List<TimeLine> saveTimeLine(List<TimeLine> timeLines);
+    TimeLine saveTimeLine(TimeLineVO timeLines);
 
-    List<TimeLine> getTimeLineByName(String name);
+    List<TimeLine> getAllTimeLine();
 
-    List<TimeLine> getTimeLineByNameWithDate(String name, LocalDateTime dateTime);
+    List<TimeLine> getTimeLineByDate(String regDate);
 
 }

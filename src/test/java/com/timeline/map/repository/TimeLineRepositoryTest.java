@@ -21,9 +21,8 @@ public class TimeLineRepositoryTest {
         TimeLine timeLine = new TimeLine();
         timeLine.setLatitude(new BigDecimal("440.0123"));
         timeLine.setLongitude(new BigDecimal("211.2646"));
-        timeLine.setName("jongdae");
 
-        timeLineRepository.save(timeLine);
+//        timeLineRepository.save(timeLine);
     }
     
     @Test
@@ -34,6 +33,17 @@ public class TimeLineRepositoryTest {
              timeLines) {
             System.out.println(timeLine.toString());
         }
+    }
+
+    @Test
+    @DisplayName("타임 라인 날짜로 가져오기")
+    void getTimeLineByRegDate() {
+//        List<TimeLine> timeLines = timeLineRepository.findAllByRegDateBetween(LocalDateTime.now());
+//        System.out.println(timeLines);
+//        for (TimeLine timeLine:
+//                timeLines) {
+//            System.out.println(timeLine.toString());
+//        }
     }
 
 }

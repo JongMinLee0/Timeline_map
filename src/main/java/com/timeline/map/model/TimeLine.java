@@ -15,15 +15,11 @@ public class TimeLine {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 10, nullable = false)
-    private String name;
-
     @Column(precision = 18, scale = 10, nullable = false)
     private BigDecimal latitude;
 
     @Column(precision = 18, scale = 10, nullable = false)
     private BigDecimal longitude;
-
 
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
     @Column
@@ -40,14 +36,6 @@ public class TimeLine {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public BigDecimal getLatitude() {
@@ -78,7 +66,6 @@ public class TimeLine {
     public String toString() {
         return "TimeLine{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
                 ", latitude=" + latitude +
                 ", longitude=" + longitude +
                 ", regDate=" + regDate +
