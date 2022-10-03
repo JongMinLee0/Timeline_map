@@ -19,3 +19,8 @@ spring:
     url: jdbc:mysql://localhost:3306/time_line
     username: jongmin
     password: tnthd2351!
+
+telegram:
+  token: 5509201226:AAGwgg6S51iwDxvLwsGoRvU3jB0rVfYT1b4
+  baseUrl: https://api.telegram.org/bot
+  chatId: 5235167755
