@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @SpringBootTest
@@ -38,12 +39,12 @@ public class TimeLineRepositoryTest {
     @Test
     @DisplayName("타임 라인 날짜로 가져오기")
     void getTimeLineByRegDate() {
-//        List<TimeLine> timeLines = timeLineRepository.findAllByRegDateBetween(LocalDateTime.now());
-//        System.out.println(timeLines);
-//        for (TimeLine timeLine:
-//                timeLines) {
-//            System.out.println(timeLine.toString());
-//        }
+        List<TimeLine> timeLines = timeLineRepository.findAllByRegDateBetween(LocalDateTime.now(), LocalDateTime.now().plusDays(1));
+        System.out.println(timeLines);
+        for (TimeLine timeLine:
+                timeLines) {
+            System.out.println(timeLine.toString());
+        }
     }
 
 }

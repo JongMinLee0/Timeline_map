@@ -1,4 +1,4 @@
-package com.timeline.map;
+package com.timeline.map.service;
 
 
 import org.junit.jupiter.api.DisplayName;
